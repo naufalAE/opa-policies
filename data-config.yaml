@@ -1,0 +1,5 @@
+policy:
+  base_url: .
+  paths:
+    - data-access.rego
+    - data-mask.rego
