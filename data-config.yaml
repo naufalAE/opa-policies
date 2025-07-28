@@ -1,5 +1,6 @@
-policy:
-  base_url: .
-  paths:
-    - data-access.rego
-    - data-mask.rego
+entries:
+  - key: data/user_roles
+    value:
+      alice@example.com: HR
+      bob@example.com: Finance
+      admin@example.com: Master
