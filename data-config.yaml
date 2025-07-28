@@ -1,6 +1,10 @@
-entries:
-  - key: data/user_roles
-    value:
-      alice@example.com: HR
-      bob@example.com: Finance
-      admin@example.com: Master
+name: default-policy-config
+sources:
+  - id: policy-source
+    type: git
+    url: https://github.com/naufalAE/opa-policies
+    branch: main
+    paths:
+      - data-access.rego
+    policy_type: rego
+    destination: /
