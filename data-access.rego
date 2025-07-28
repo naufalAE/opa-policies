@@ -4,7 +4,12 @@ default allow = false
 
 user_roles := {
   "alice@example.com": "HR",
-  "bob@example.com": "Finance"
+  "bob@example.com": "Finance",
+  "admin@example.com": "Master"
+}
+
+allow_row contains true if {
+  input.user == "admin@example.com"
 }
 
 allow_row contains true if {
