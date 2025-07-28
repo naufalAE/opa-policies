@@ -2,25 +2,25 @@ package trino.access
 
 default allow = false
 
-user_roles = {
+user_roles := {
   "alice@example.com": "HR",
   "bob@example.com": "Finance"
 }
 
-allow_row[true] {
+allow_row contains true if {
   input.user == "bob@example.com"
   input.row.department == "Finance"
   input.row.salary <= 100000
 }
 
-allow_row[true] {
+allow_row contains true if {
   input.user == "alice@example.com"
 }
 
-mask_column["ssn"] {
+mask_column contains "ssn" if {
   input.user == "alice@example.com"
 }
 
-mask_column["ssn"] {
+mask_column contains "ssn" if {
   input.user == "bob@example.com"
 }
