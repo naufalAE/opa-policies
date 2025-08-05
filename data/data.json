@@ -1,0 +1,23 @@
+{
+  "users": {
+    "admin": {
+      "role": "admin"
+    },
+    "jane": {
+      "role": "user"
+    },
+    "bob": {
+      "role": "user"
+    }
+  },
+  "column_access": {
+    "customers": {
+      "ssn": {
+        "allowed_roles": ["admin"]
+      },
+      "email": {
+        "allowed_roles": ["admin", "user"]
+      }
+    }
+  }
+}
