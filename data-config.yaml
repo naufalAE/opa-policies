@@ -5,6 +5,9 @@ sources:
     url: https://github.com/naufalAE/opa-policies
     branch: main
     paths:
-      - data-access.rego
+      - column_mask.rego
+      - batch_mask.rego
+      - data_access.rego
+      - ../data/data.json
     policy_type: rego
     destination: /
